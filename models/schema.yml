@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: raw
     database: proje1-493409
-    schema: gz_raw_data
+    schema: GZrawData
 
     tables:
       - name: sales

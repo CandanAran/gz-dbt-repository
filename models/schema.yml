@@ -167,9 +167,9 @@ models:
         description: "Number of clicks."
         tests:
           - not_null
+
   - name: int_campaigns_day
     description: Daily aggregated campaign metrics.
-
     columns:
       - name: date_date
         description: Campaign date.
@@ -191,6 +191,81 @@ models:
         description: Total number of clicks per day.
         tests:
           - not_null
+
+  - name: finance_campaigns_day
+    description: Daily finance mart enriched with advertising campaign metrics.
+    columns:
+      - name: date
+        description: Date of the financial and advertising metrics.
+        tests:
+          - unique
+          - not_null
+
+      - name: ads_margin
+        description: Operational margin after advertising costs.
+        tests:
+          - not_null
+
+      - name: average_basket
+        description: Average basket value.
+        tests:
+          - not_null
+
+      - name: operational_margin
+        description: Daily operational margin.
+        tests:
+          - not_null
+
+      - name: ads_cost
+        description: Daily advertising cost.
+        tests:
+          - not_null
+
+      - name: ads_impression
+        description: Daily number of ad impressions.
+        tests:
+          - not_null
+
+      - name: ads_clicks
+        description: Daily number of ad clicks.
+        tests:
+          - not_null
+
+      - name: quantity
+        description: Daily quantity of products sold.
+        tests:
+          - not_null
+
+      - name: revenue
+        description: Daily revenue.
+        tests:
+          - not_null
+
+      - name: purchase_cost
+        description: Daily purchase cost.
+        tests:
+          - not_null
+
+      - name: margin
+        description: Daily margin before shipping and advertising costs.
+        tests:
+          - not_null
+
+      - name: shipping_fee
+        description: Daily shipping fees paid by customers.
+        tests:
+          - not_null
+
+      - name: log_cost
+        description: Daily logistics cost.
+        tests:
+          - not_null
+
+      - name: ship_cost
+        description: Daily shipping cost paid by the company.
+        tests:
+          - not_null
+ 
 
 
 

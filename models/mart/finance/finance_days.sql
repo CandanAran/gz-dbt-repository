@@ -7,7 +7,9 @@ SELECT
     ROUND(SUM(purchase_cost), 2) AS purchase_cost,
     ROUND(SUM(shipping_fee), 2) AS shipping_fee,
     ROUND(SUM(logcost), 2) AS logcost,
-    SUM(quantity) AS quantity
+    SUM(quantity) AS quantity,
+    ROUND(SUM(margin), 2) AS margin,
+    ROUND(SUM(ship_cost), 2) AS ship_cost,
 FROM {{ ref('int_orders_operational') }}
 GROUP BY date_date
 ORDER BY date_date DESC

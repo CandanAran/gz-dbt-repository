@@ -129,3 +129,45 @@ sources:
             description: Number of clicks
 
 
+models:
+  - name: int_campaigns
+    description: "All advertising campaign data combined from Adwords, Bing, Criteo and Facebook."
+    columns:
+      - name: date_date
+        description: "Date of the campaign performance."
+        tests:
+          - not_null
+
+      - name: paid_source
+        description: "Advertising platform."
+        tests:
+          - not_null
+
+      - name: campaign_key
+        description: "Campaign identifier."
+        tests:
+          - not_null
+
+      - name: campaign_name
+        description: "Campaign name."
+        tests:
+          - not_null
+
+      - name: ads_cost
+        description: "Advertising cost of the campaign."
+        tests:
+          - not_null
+
+      - name: impression
+        description: "Number of impressions."
+        tests:
+          - not_null
+
+      - name: click
+        description: "Number of clicks."
+        tests:
+          - not_null
+
+
+
+

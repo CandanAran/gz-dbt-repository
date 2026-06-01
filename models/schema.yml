@@ -167,6 +167,30 @@ models:
         description: "Number of clicks."
         tests:
           - not_null
+  - name: int_campaigns_day
+    description: Daily aggregated campaign metrics.
+
+    columns:
+      - name: date_date
+        description: Campaign date.
+        tests:
+          - unique
+          - not_null
+
+      - name: ads_cost
+        description: Total advertising cost per day.
+        tests:
+          - not_null
+
+      - name: impression
+        description: Total number of impressions per day.
+        tests:
+          - not_null
+
+      - name: click
+        description: Total number of clicks per day.
+        tests:
+          - not_null
 
 
 

@@ -3,12 +3,12 @@ version: 2
 sources:
   - name: raw
     database: proje1-493409
-    schema: GZrawData
+    schema: gz_raw_data
 
     tables:
       - name: sales
         identifier: raw_gz_sales
-        description: sales of Greenweez / we have on row per product_id found in each orders_id
+        description: sales of Greenweez / we have one row per product_id found in each orders_id
         columns:
           - name: date_date
             description: date of purchase
@@ -51,3 +51,81 @@ sources:
             description: Logistics cost related to shipping
           - name: ship_cost
             description: Shipping cost for each order paid by the company
+
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: Adwords campaigns
+        columns:
+          - name: date_date
+            description: Campaign date
+          - name: paid_source
+            description: Advertising platform
+          - name: campaign_key
+            description: Campaign identifier
+          - name: camPGN_name
+            description: Campaign name
+          - name: ads_cost
+            description: Advertising cost
+          - name: impression
+            description: Number of impressions
+          - name: click
+            description: Number of clicks
+
+      - name: bing
+        identifier: raw_gz_bing
+        description: Bing campaigns
+        columns:
+          - name: date_date
+            description: Campaign date
+          - name: paid_source
+            description: Advertising platform
+          - name: campaign_key
+            description: Campaign identifier
+          - name: camPGN_name
+            description: Campaign name
+          - name: ads_cost
+            description: Advertising cost
+          - name: impression
+            description: Number of impressions
+          - name: click
+            description: Number of clicks
+
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: Criteo campaigns
+        columns:
+          - name: date_date
+            description: Campaign date
+          - name: paid_source
+            description: Advertising platform
+          - name: campaign_key
+            description: Campaign identifier
+          - name: camPGN_name
+            description: Campaign name
+          - name: ads_cost
+            description: Advertising cost
+          - name: impression
+            description: Number of impressions
+          - name: click
+            description: Number of clicks
+
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: Facebook campaigns
+        columns:
+          - name: date_date
+            description: Campaign date
+          - name: paid_source
+            description: Advertising platform
+          - name: campaign_key
+            description: Campaign identifier
+          - name: camPGN_name
+            description: Campaign name
+          - name: ads_cost
+            description: Advertising cost
+          - name: impression
+            description: Number of impressions
+          - name: click
+            description: Number of clicks
+
+
